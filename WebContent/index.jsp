@@ -120,7 +120,7 @@
 			<div class="col-lg-12">	
 				<div class="row">
 					<div class="col-md-3">
-						<canvas id="genderBarChart" width="250" height="300"></canvas>
+						<canvas id="genderDoughnutChart" width="250" height="300"></canvas>
 					</div><!-- /.col-md-3 -->
 				
 					<div class="col-md-3">
@@ -132,7 +132,6 @@
 					</div><!-- /.col-md-6 -->
 				</div><!-- /.row -->
 			</div><!--  /.col-lg-12 -->
-			
 		</div><!-- /.container wow fadeInUp -->
 	</section>
 	<hr>
@@ -202,31 +201,33 @@
     <script src="js/Chart.js-master/Chart.js"></script>
     
     <script>
-    // gender counts chart
-    var ctx = document.getElementById("genderBarChart").getContext("2d");
-		
-    	<c:set var="genderCount" value="${demographics.genderCount}"/>
-		var genderBarData = {
-    		labels: [<c:forEach var="gender" items="${genderCount.keySet()}">"${gender}", </c:forEach>],
-    		datasets: [
-     			{
-       				label: "Gender Dataset",
-            		fillColor: "rgba(220,220,220,0.5)",
-            		strokeColor: "rgba(220,220,220,0.8)",
-            		highlightFill: "rgba(220,220,220,0.75)",
-            		highlightStroke: "rgba(220,220,220,1)",
-            		data: [<c:forEach var="genderCount" items="${genderCount.values()}">"${genderCount}", </c:forEach>]
-        		}
-    		]
-		};
-		
-		var genderBarChart = new Chart(ctx).Bar(genderBarData);
+    // gender counts chart   
+    var ctx = document.getElementById("genderDoughnutChart").getContext("2d");
+
+	<c:set var="genderCount" value="${genderDemographics.genderCount}"/>
+    var genderData = [
+                {
+                    value: "${genderCount.values().toArray()[0]}",
+                    color: "rgba(251,187,205,0.7)",
+                	highlight: "rgba(251,187,205,1)",
+                    label: "${genderCount.keySet().toArray()[0]}"
+                },
+                {
+                    value: "${genderCount.values().toArray()[1]}",
+                    color: "rgba(151,187,205,0.7)",
+                	highlight: "rgba(151,187,205,1)",
+                    label: "${genderCount.keySet().toArray()[1]}"
+                }
+            ]
+    
+    var genderDoughnutChart = new Chart(ctx).Doughnut(genderData);
 		
 	// salary totals by gender chart
     var ctx = document.getElementById("salaryBarChart").getContext("2d");
 		
+    	<c:set var="salaryTotal" value="${salaryDemographics.salaryTotal}"/>
 		var salaryBarData = {
-    		labels: ["Male Total", "Female Total"],
+    		labels: [<c:forEach var="gender" items="${salaryTotal.keySet()}">"${gender}", </c:forEach>],
     		datasets: [
      			{
        				label: "Salary Dataset",
@@ -234,13 +235,20 @@
             		strokeColor: "rgba(151,187,205,0.8)",
             		highlightFill: "rgba(151,187,205,0.75)",
             		highlightStroke: "rgba(151,187,205,1)",
-            		// format as USD
-            		data: [235000, 560000]
+            		data: [<c:forEach var="salaryTotal" items="${salaryTotal.values()}">"${salaryTotal}", </c:forEach>]
         		}
     		]
 		};
 		
-		var salaryBarChart = new Chart(ctx).Bar(salaryBarData);
+		var options = {
+			tooltipTemplate: 
+				function(label){return  '$' + label.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");},
+			animation: false,
+			scaleLabel:
+				function(label){return  '$' + label.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");}
+		};
+		
+		var salaryBarChart = new Chart(ctx).Bar(salaryBarData, options);
 		
 	// employee count by department chart
     var ctx = document.getElementById("departmentBarChart").getContext("2d");

@@ -20,12 +20,13 @@ public class EmployeeController {
 
 		// on page load
 		mv.addObject("employees", employeeDAO.getEmployees());
-		mv.addObject("demographics", employeeDAO.getDemographics());
-		
+
 		mv.addObject("employee", employeeDAO.getEmployeeByLastName(query));
 		mv.addObject("empHeaders", employeeDAO.getEmployeesHeaders(query));
 		mv.addObject("empData", employeeDAO.getEmployeesResults(query));
 		
+		mv.addObject("genderDemographics", employeeDAO.getGenderDemographics());
+		mv.addObject("salaryDemographics", employeeDAO.getSalaryDemographics());
 		return mv;
 	}
 
