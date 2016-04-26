@@ -48,7 +48,7 @@
 			<ul class="nav navbar-nav">
 				<li class="nav-item"><a class="nav-link page-scroll" href="GoToAdd.do">Add</a>
 				</li>
-				<li class="nav-item"><a class="nav-link page-scroll" href="GoToEdit.do">Edit</a>
+				<li class="nav-item"><a class="nav-link page-scroll" href="GoToEdit.do?id=${initialEmp.id}&firstName=${initialEmp.firstName}&lastName=${initialEmp.lastName}&gender=${initialEmp.gender}&salary=${initialEmp.salary}&city=${initialEmp.city}&state=${initialEmp.state}">Edit</a>
 				</li>
 			</ul>
 

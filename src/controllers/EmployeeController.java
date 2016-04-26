@@ -68,6 +68,7 @@ public class EmployeeController {
 		
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("editEmployee.jsp");
+		mv.addObject("initialEmp", employeeDAO.getEmployees().get(0));
 		mv.addObject("url", url);
 		mv.addObject("employee", e);
 		mv.addObject("employees", employeeDAO.getEmployees());
