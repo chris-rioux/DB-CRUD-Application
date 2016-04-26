@@ -5,7 +5,7 @@ public class Employee {
 	private String firstName;
 	private String lastName;
 	private String gender;
-	private int salary;
+	private Integer salary;
 	private String dept;
 	private String project;
 	private String city;
@@ -14,7 +14,7 @@ public class Employee {
 	public Employee() {
 	}
 
-	public Employee(int id, String firstName, String lastName, String gender, int salary, String dept, String project,
+	public Employee(int id, String firstName, String lastName, String gender, Integer salary, String dept, String project,
 			String city, String state) {
 		super();
 		this.id = id;
@@ -40,7 +40,7 @@ public class Employee {
 	public String getGender() {
 		return gender;
 	}
-	public int getSalary() {
+	public Integer getSalary() {
 		return salary;
 	}
 	public String getDept() {
@@ -68,7 +68,7 @@ public class Employee {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public void setSalary(int salary) {
+	public void setSalary(Integer salary) {
 		this.salary = salary;
 	}
 	public void setDept(String dept) {

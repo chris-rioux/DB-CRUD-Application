@@ -7,6 +7,7 @@ public class Demographics {
 	private int genderFemale;
 	Map<String, Integer> genderCount;
 	Map<String, Integer> salaryTotal;
+	Map<String, Integer> genderCntByDept;
 
 	public Demographics() {
 	}
@@ -23,6 +24,9 @@ public class Demographics {
 	public Map<String, Integer> getSalaryTotal() {
 		return salaryTotal;
 	}
+	public Map<String, Integer> getGenderCntByDept() {
+		return genderCntByDept;
+	}
 
 	public void setGenderFemale(int genderFemale) {
 		this.genderFemale = genderFemale;
@@ -36,4 +40,8 @@ public class Demographics {
 	public void setSalaryTotal(Map<String, Integer> salaryTotal) {
 		this.salaryTotal = salaryTotal;
 	}
+	public void setGenderCntByDept(Map<String, Integer> genderCntByDept) {
+		this.genderCntByDept = genderCntByDept;
+	}
+	
 }
