@@ -141,17 +141,17 @@
 				</div><!--  /.col-lg-12 -->
 
 				<hr>
-				<div class="col-lg-12">
-					<div class="col-md-3">
+				<div class="col-xs-12">
+					<div class="col-md-3" id="charts">
 						<canvas id="genderDoughnutChart" width="250" height="300"></canvas>
 					</div>
-					<div class="col-md-3">
-						<canvas id="salaryBarChart" width="250" height="300"></canvas>
+					<div class="col-md-2" id="charts">
+						<canvas id="salaryBarChart" width="200" height="300"></canvas>
 					</div>
-					<div class="col-md-6">
-						<canvas id="departmentBarChart" width="500" height="450"></canvas>
+					<div class="col-md-5" id="charts">
+						<canvas id="departmentBarChart" width="450" height="450"></canvas>
 					</div>					
-				</div><!--  /.col-lg-12 -->
+				</div><!--  /.col-xs-12 -->
 								
 			</div><!-- /.container wow fadeInUp --> 
 		</section>
@@ -173,7 +173,7 @@
 				class="fa fa-twitter fa-2x"></i></a>&nbsp;&nbsp; <a
 				href="https://www.linkedin.com/in/chris-rioux-b500569a"
 				target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>&nbsp;&nbsp;
-			<a href="https://github.com/chrisrioux2" target="_blank"><i
+			<a href="https://github.com/chris-rioux" target="_blank"><i
 				class="fa fa-github fa-2x"></i></a></br>
 		</div>
 	</div>
@@ -197,7 +197,7 @@
 									<li id="topButton"><a href="https://twitter.com/chrisrioux_" target="_blank"
 										class="btn btn-primary-outline"><i
 										class="fa fa-twitter fa-fw"></i>&nbsp;&nbsp;Twitter</a></li><br> 
-									<li><a href="https://github.com/chrisrioux2" target="_blank"
+									<li><a href="https://github.com/chris-rioux" target="_blank"
 										class="btn btn-primary-outline"><i
 										class="fa fa-github-alt fa-fw"></i>&nbsp;&nbsp;Github</a></li><br>
 									<li><a href="https://www.linkedin.com/in/chris-rioux-b500569a"

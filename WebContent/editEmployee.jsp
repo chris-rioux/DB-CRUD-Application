@@ -126,7 +126,7 @@
 				class="fa fa-twitter fa-2x"></i></a>&nbsp;&nbsp; <a
 				href="https://www.linkedin.com/in/chris-rioux-b500569a"
 				target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>&nbsp;&nbsp;
-			<a href="https://github.com/chrisrioux2" target="_blank"><i
+			<a href="https://github.com/chris-rioux" target="_blank"><i
 				class="fa fa-github fa-2x"></i></a> </br>
 		</div>
 	</div>
@@ -150,7 +150,7 @@
 									<li id="topButton"><a href="https://twitter.com/chrisrioux_" target="_blank"
 										class="btn btn-primary-outline"><i
 										class="fa fa-twitter fa-fw"></i>&nbsp;&nbsp;Twitter</a></li><br> 
-									<li><a href="https://github.com/chrisrioux2" target="_blank"
+									<li><a href="https://github.com/chris-rioux" target="_blank"
 										class="btn btn-primary-outline"><i
 										class="fa fa-github-alt fa-fw"></i>&nbsp;&nbsp;Github</a></li><br>
 									<li><a href="https://www.linkedin.com/in/chris-rioux-b500569a"
