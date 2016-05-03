@@ -9,4 +9,4 @@ Week 8 Skill Distillery project leveraging the stack below to develop a simple D
 - jQuery
 - Bootstrap v4
 - MySQL
-- ChartsJS
+- ChartJS
