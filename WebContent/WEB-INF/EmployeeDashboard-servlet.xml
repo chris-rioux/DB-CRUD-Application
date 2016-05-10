@@ -11,6 +11,7 @@
 	<context:component-scan base-package="controllers"/>
 	<mvc:annotation-driven/>
 
-	<bean id="dao" class="data.EmployeeDbDAO"/> 
+	<bean id="dao" class="data.EmployeeDbDAO"/>
+	<bean id="exc" class="controllers.ExceptionController"></bean> 
 		
 </beans>
