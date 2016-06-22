@@ -3,8 +3,8 @@ Week 8 Skill Distillery project leveraging the stack below to develop a simple D
 
 - Java
 - Spring MVC
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JS
 - jQuery
 - Bootstrap v4
